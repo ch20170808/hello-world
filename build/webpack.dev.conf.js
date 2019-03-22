@@ -69,6 +69,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 })
 
 module.exports = new Promise((resolve, reject) => {
+  console.log("新建后会立即执行……")
   portfinder.basePort = process.env.PORT || config.dev.port
   portfinder.getPort((err, port) => {
     if (err) {
